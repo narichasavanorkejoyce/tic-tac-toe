@@ -14,39 +14,39 @@ const signUp = function (data) {
   })
 }
 
-const signIn = function (data) {
-  console.log(data)
-  return $.ajax({
-    url: app.host + '/sign-in/',
-    method: 'POST',
-    data
-  })
-}
-
-const signOut = function () {
-  return $.ajax({
-    method: 'DELETE',
-    url: app.host + '/sign-out/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    }
-  })
-}
-
-const changePassword = function (data) {
-  return $.ajax({
-    method: 'PATCH',
-    url: app.host + '/change-password/' + app.user.id,
-    headers: {
-      Authorization: 'Token token=' + app.user.token
-    },
-    data: data
-  })
-}
+// const signIn = function (data) {
+//   console.log(data)
+//   return $.ajax({
+//     url: app.host + '/sign-in/',
+//     method: 'POST',
+//     data
+//   })
+// }
+//
+// const signOut = function () {
+//   return $.ajax({
+//     method: 'DELETE',
+//     url: app.host + '/sign-out/' + app.user.id,
+//     headers: {
+//       Authorization: 'Token token=' + app.user.token
+//     }
+//   })
+// }
+//
+// const changePassword = function (data) {
+//   return $.ajax({
+//     method: 'PATCH',
+//     url: app.host + '/change-password/' + app.user.id,
+//     headers: {
+//       Authorization: 'Token token=' + app.user.token
+//     },
+//     data: data
+//   })
+// }
 
 module.exports = {
-  signUp,
-  signIn,
-  signOut,
-  changePassword
+  signUp
+  // signIn,
+  // signOut,
+  // changePassword
 }
