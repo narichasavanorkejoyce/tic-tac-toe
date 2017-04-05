@@ -1,14 +1,14 @@
 'use strict'
-const app = require('../app.js')
+const store = require('../store.js')
 
 const signInSuccess = (data) => {
-  app.user = data.user
-  console.log(app)
+  store.user = data.user
+  console.log(store)
 }
 
 const signOutSuccess = () => {
-  app.user = null
-  console.log(app)
+  store.user = null
+  console.log(store)
 }
 
 const changePasswordSuccess = () => {
