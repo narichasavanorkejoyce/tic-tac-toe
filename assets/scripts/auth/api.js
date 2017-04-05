@@ -23,16 +23,16 @@ const signIn = function (data) {
   })
 }
 
-// const signOut = function () {
-//   return $.ajax({
-//     method: 'DELETE',
-//     url: app.host + '/sign-out/' + app.user.id,
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token
-//     }
-//   })
-// }
-//
+const signOut = function () {
+  return $.ajax({
+    method: 'DELETE',
+    url: app.host + '/sign-out/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    }
+  })
+}
+
 // const changePassword = function (data) {
 //   return $.ajax({
 //     method: 'PATCH',
@@ -46,7 +46,7 @@ const signIn = function (data) {
 
 module.exports = {
   signUp,
-  signIn
-  // signOut,
+  signIn,
+  signOut
   // changePassword
 }

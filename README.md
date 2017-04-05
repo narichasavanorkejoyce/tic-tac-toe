@@ -3,14 +3,16 @@
 # API End-Points [game-project-api]
 
 users#signup
-- Response: 201, created
-- User created
+- Response: 201, created (curl script)
+- User created using POST request
 
 users#sign-in
-- Response: 200, OK
-- User exists with token
+- Response: 200, ok (curl script)
+- User exists with token using POST request
 
 users#sign-out
+- Response: 204, no content (curl script)
+- Using DELETE request, token is deleted and user is set to null
 
 users#changepw
 
