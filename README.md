@@ -15,6 +15,8 @@ users#sign-out
 - Using DELETE request, token is deleted and user is set to null
 
 users#changepw
+- Response: 204, no content (curl script)
+- Using PATCH request, old password is set to new password
 
 games#index
 

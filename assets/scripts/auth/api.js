@@ -33,20 +33,20 @@ const signOut = function () {
   })
 }
 
-// const changePassword = function (data) {
-//   return $.ajax({
-//     method: 'PATCH',
-//     url: app.host + '/change-password/' + app.user.id,
-//     headers: {
-//       Authorization: 'Token token=' + app.user.token
-//     },
-//     data: data
-//   })
-// }
+const changePassword = function (data) {
+  return $.ajax({
+    method: 'PATCH',
+    url: app.host + '/change-password/' + app.user.id,
+    headers: {
+      Authorization: 'Token token=' + app.user.token
+    },
+    data: data
+  })
+}
 
 module.exports = {
   signUp,
   signIn,
-  signOut
-  // changePassword
+  signOut,
+  changePassword
 }
