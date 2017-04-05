@@ -4,7 +4,7 @@
   API="${API_ORIGIN:-http://localhost:4741}"
   URL_PATH="/change-password/10"
   curl --include --request PATCH "${API}${URL_PATH}" \
-    --header "Authorization: Token token=BAhJIiUwY2RkZTQ1ZDY4YmE0ZDliMzdlNDM0ODc4MDA4N2MxOAY6BkVG--66665413ae3998b4a6e2e273a00b6736562bb6d2" \
+    --header "Authorization: Token token=token" \
     --header "Content-Type: application/json" \
     --data '{
       "passwords": {
