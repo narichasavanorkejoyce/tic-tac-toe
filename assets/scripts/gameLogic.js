@@ -49,21 +49,22 @@ const gameBoard = function (event) {
   if (numMoves % 2 === 0) {
     // Fill in slot with 'O'
     $(this).html('X')
-    numMoves = numMoves + 1
-    return numMoves
+    // numMoves = numMoves + 1
+    // return numMoves
     // console.log('the even numbered if statement ran')
     // Check whether this move resulted in a winning combo
-    // checkWin('X')
+    checkWin('X')
     // If we're on an odd number of moves, place down 'X'
   } else if (numMoves % 2 !== 0) {
     // Fill in slot with 'X'
     $(this).html('O')
-    numMoves = numMoves + 1
-    return numMoves
+    // numMoves = numMoves + 1
+    // return numMoves
     // console.log('the odd numbered if statement ran')
     // Check whether this move resulted in a winning combo
-    // checkWin('O')
+    checkWin('O')
   }
+  numMoves = numMoves++
   console.log(numMoves)
 }
 
