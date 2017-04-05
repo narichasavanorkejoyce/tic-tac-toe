@@ -36,7 +36,7 @@ let numMoves = 0
 
 const gameBoard = function (event) {
   // If we're on an even number of moves, place down '0'
-  if (numMoves % 2 === 0) {
+  if ($(this).html() === '' && numMoves % 2 === 0 && numMoves < 9) {
     // Fill in slot with 'X'
     $(this).html('X')
     // Add 1 to the numMoves counter
@@ -44,13 +44,15 @@ const gameBoard = function (event) {
     // Check whether this move resulted in a winning combo
     checkWin('X')
     // If we're on an odd number of moves, place down 'X'
-  } else if (numMoves % 2 !== 0) {
+  } else if ($(this).html() === '' && numMoves % 2 !== 0 && numMoves < 9) {
     // Fill in slot with 'O'
     $(this).html('O')
     // Add 1 to the numMoves counter
     numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
     checkWin('O')
+  } else if ($(this).html() !== '') {
+    console.log('Please pick another slot')
   }
   console.log(numMoves)
 }
