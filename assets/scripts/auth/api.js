@@ -14,15 +14,15 @@ const signUp = function (data) {
   })
 }
 
-// const signIn = function (data) {
-//   console.log(data)
-//   return $.ajax({
-//     url: app.host + '/sign-in/',
-//     method: 'POST',
-//     data
-//   })
-// }
-//
+const signIn = function (data) {
+  console.log(data)
+  return $.ajax({
+    url: app.host + '/sign-in/',
+    method: 'POST',
+    data
+  })
+}
+
 // const signOut = function () {
 //   return $.ajax({
 //     method: 'DELETE',
@@ -45,8 +45,8 @@ const signUp = function (data) {
 // }
 
 module.exports = {
-  signUp
-  // signIn,
+  signUp,
+  signIn
   // signOut,
   // changePassword
 }
