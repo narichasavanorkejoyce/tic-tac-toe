@@ -1,34 +1,34 @@
 const checkWin = function (slotValue) {
   if ($('#slot-1').html() !== '' && $('#slot-1').html() === $('#slot-2').html() && $('#slot-1').html() === $('#slot-3').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-1').html() !== '' && $('#slot-1').html() === $('#slot-4').html() && $('#slot-1').html() === $('#slot-7').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-1').html() !== '' && $('#slot-1').html() === $('#slot-5').html() && $('#slot-1').html() === $('#slot-9').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-3').html() !== '' && $('#slot-3').html() === $('#slot-5').html() && $('#slot-3').html() === $('#slot-7').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-2').html() !== '' && $('#slot-2').html() === $('#slot-5').html() && $('#slot-2').html() === $('#slot-8').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-3').html() !== '' && $('#slot-3').html() === $('#slot-6').html() && $('#slot-3').html() === $('#slot-9').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-7').html() !== '' && $('#slot-7').html() === $('#slot-8').html() && $('#slot-7').html() === $('#slot-9').html()) {
+    // location.reload()
+    return console.log('You found a match!')
+  } else if ($('#slot-4').html() !== '' && $('#slot-4').html() === $('#slot-5').html() && $('#slot-4').html() === $('#slot-6').html()) {
+    // location.reload()
     return console.log('You found a match!')
   }
+}
 
-  if ($('#slot-1').html() !== '' && $('#slot-1').html() === $('#slot-4').html() && $('#slot-1').html() === $('#slot-7').html()) {
-    return console.log('You found a match!')
-  }
-
-  if ($('#slot-1').html() !== '' && $('#slot-1').html() === $('#slot-5').html() && $('#slot-1').html() === $('#slot-9').html()) {
-    return console.log('You found a match!')
-  }
-
-  if ($('#slot-3').html() !== '' && $('#slot-3').html() === $('#slot-5').html() && $('#slot-3').html() === $('#slot-7').html()) {
-    return console.log('You found a match!')
-  }
-
-  if ($('#slot-2').html() !== '' && $('#slot-5').html() === $('#slot-5').html() && $('#slot-2').html() === $('#slot-8').html()) {
-    return console.log('You found a match!')
-  }
-
-  if ($('#slot-3').html() !== '' && $('#slot-3').html() === $('#slot-6').html() && $('#slot-3').html() === $('#slot-9').html()) {
-    return console.log('You found a match!')
-  }
-
-  if ($('#slot-7').html() !== '' && $('#slot-7').html() === $('#slot-8').html() && $('#slot-7').html() === $('#slot-9').html()) {
-    return console.log('You found a match!')
-  }
-
-  if ($('#slot-4').html() !== '' && $('#slot-4').html() === $('#slot-5').html() && $('#slot-4').html() === $('#slot-6').html()) {
-    return console.log('You found a match!')
+const checkDraw = function () {
+  if ($('.slot').html() !== '') {
+    return console.log('There is a draw!')
   }
 }
 
@@ -51,6 +51,8 @@ const gameBoard = function (event) {
     numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
     checkWin('O')
+  } else if (numMoves === 8) {
+    checkDraw()
   } else if ($(this).html() !== '') {
     console.log('Please pick another slot')
   }
