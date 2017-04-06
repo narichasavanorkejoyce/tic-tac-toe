@@ -43,6 +43,10 @@ const checkDraw = function () {
   }
 }
 
+const clearBoard = function () {
+  location.reload()
+}
+
 let numMoves = 0
 const gameArray = []
 
@@ -94,6 +98,7 @@ const gameBoard = function (event) {
 const gameLogicHandlers = () => {
   // $('#sign-up').on('submit', onSignUp)
   $('.slot').on('click', gameBoard)
+  $('#play-again').on('submit', clearBoard)
 }
 
 module.exports = {
