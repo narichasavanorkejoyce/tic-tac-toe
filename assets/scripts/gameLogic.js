@@ -38,20 +38,26 @@ const gameArray = []
 const gameBoard = function (event) {
   // If we're on an even number of moves, place down '0'
   if ($(this).html() === '' && numMoves % 2 === 0 && numMoves < 9) {
-    // Fill in slot with 'X'
+    // Fill in slot with 'X' - UI
     $(this).html('X')
+    // Store the move in an array
     gameArray[+$(this).attr('id')] = 'X'
     console.log(gameArray)
+    // Populate the game form with value. This will be sent up to the back end through a PATCH AJAX request
+    // $(formid).
     // Add 1 to the numMoves counter
     numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
     checkWin('X')
-    // If we're on an odd number of moves, place down 'X'
+    // If we're on an odd number of moves, place down 'O'
   } else if ($(this).html() === '' && numMoves % 2 !== 0 && numMoves < 9) {
     // Fill in slot with 'O'
     $(this).html('O')
+    // Store the move in an array
     gameArray[+$(this).attr('id')] = 'O'
     console.log(gameArray)
+    // Populate the game form with value. This will be sent up to the back end through a PATCH AJAX request
+    // $(formid).
     // Add 1 to the numMoves counter
     numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo

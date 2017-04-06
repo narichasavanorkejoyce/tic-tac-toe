@@ -19,10 +19,14 @@ users#changepw
 - Using PATCH request, old password is set to new password
 
 games#index
+- Response 200, ok (curl script)
 
 games#create
+- Response 201, created (curl script)
+- Using a POST request, a game object is created
 
 games#show
+- Response 200, ok (curl script)
 
 games#update
 
