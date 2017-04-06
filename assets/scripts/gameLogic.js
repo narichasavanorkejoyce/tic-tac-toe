@@ -81,12 +81,14 @@ const gameBoard = function (event) {
     numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
     checkWin('O')
+    // Check whether it's a cat's game
   } else if (numMoves === 8) {
     checkDraw()
   } else if ($(this).html() !== '') {
     console.log('Please pick another slot')
   }
   console.log(numMoves)
+  $('#game-info').submit()
 }
 
 const gameLogicHandlers = () => {

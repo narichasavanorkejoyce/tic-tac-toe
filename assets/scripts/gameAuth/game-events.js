@@ -4,6 +4,25 @@ const gameApi = require('./game-api')
 const gameUi = require('./game-ui')
 const getFormFields = require('../../../lib/get-form-fields.js')
 
+const onNewGame = function (event) {
+  event.preventDefault()
+  const data = getFormFields(event.target)
+  gameApi.newGame(data)
+    .done(gameUi.successNewGame)
+    .fail(gameUi.fail)
+}
+
+const onSubmitMove = function (event) {
+  event.preventDefault()
+  console.log('onSubmitMove worked!')
+  const data = getFormFields(this)
+  console.log(this)
+  console.log(event.target)
+  gameApi.submitMove(data)
+    .done(gameUi.successMove)
+    .fail(gameUi.fail)
+}
+
 const onGetIndex = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
@@ -12,54 +31,9 @@ const onGetIndex = function (event) {
     .fail(gameUi.fail)
 }
 
-const onNewGame = function (event) {
-  event.preventDefault()
-  const data = getFormFields(event.target)
-  gameApi.newGame(data)
-    .done(gameUi.success)
-    .fail(gameUi.fail)
-}
-
-// const onSubmitMove
-
-// const onSignUp = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.signUp(data)
-//   .done(ui.success)
-//   .fail(ui.fail)
-// }
-//
-// const onSignIn = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.signIn(data)
-//   .done(ui.signInSuccess)
-//   .fail(ui.fail)
-// }
-//
-// const onSignOut = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.signOut(data)
-//   .done(ui.signOutSuccess)
-//   .fail(ui.fail)
-// }
-//
-// const onChangePassword = function (event) {
-//   event.preventDefault()
-//   const data = getFormFields(event.target)
-//   api.changePassword(data)
-//   .done(ui.changePasswordSuccess)
-//   .fail(ui.fail)
-// }
-
 const gameEventHandlers = () => {
-  // $('#sign-up').on('submit', onSignUp)
-  // $('#sign-in').on('submit', onSignIn)
-  // $('#sign-out').on('submit', onSignOut)
-  // $('#change-password').on('submit', onChangePassword)
   $('.new-game').on('submit', onNewGame)
+  $('#game-info').on('submit', onSubmitMove)
 }
 
 module.exports = {

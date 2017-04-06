@@ -1,21 +1,18 @@
 'use strict'
 const store = require('../store.js')
 
-// const signInSuccess = (data) => {
-//   store.user = data.user
-//   console.log(store)
-// }
-//
-// const signOutSuccess = () => {
-//   store.user = null
-//   console.log(store)
-// }
-//
-// const changePasswordSuccess = () => {
-//   console.log('Password Successfully Changed.')
-// }
-
 const success = (data) => {
+  console.log(data)
+}
+
+const successNewGame = (data) => {
+  console.log('successNewGame worked!')
+  store.game = data.game
+  console.log(store)
+}
+
+const successMove = (data) => {
+  console.log('successMove worked!')
   console.log(data)
 }
 
@@ -25,8 +22,7 @@ const failure = (error) => {
 
 module.exports = {
   failure,
-  success
-//   signInSuccess,
-//   signOutSuccess,
-//   changePasswordSuccess
+  success,
+  successNewGame,
+  successMove
 }
