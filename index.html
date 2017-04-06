@@ -51,6 +51,12 @@
     </fieldset>
   </form>
 <br>
+<form class="new-game">
+  <fieldset>
+    <input type="submit" name="submit" value="Start!">
+  </fieldset>
+</form>
+<br>
   <div class="container">
     <!-- Construct a 3x3 Grid -->
     <form class="gameboard">
@@ -72,17 +78,10 @@
   </form>
   </div>
 <br>
-<form class="new-game">
-  <fieldset>
-    <input type="submit" name="submit" value="Play Again!">
-  </fieldset>
-</form>
- <!-- <div><button id = "new-game">Play Again!</button></div> -->
-<br>
 <form id="game-info">
-  <input name="game[cell][index]" type="text" value="0" id="game-array-index">
-  <input name="game[cell][value]" type="text" value="x" id="move-marker">
-  <input name="game[over]" type="text" value="false" id="game-outcome">
+  <input name="game[cell][index]" type="text" value="index" id="game-array-index">
+  <input name="game[cell][value]" type="text" value="marker" id="move-marker">
+  <input name="game[over]" type="text" value="outcome" id="game-outcome">
 </form>
 <br>
 </body>
