@@ -25,18 +25,18 @@ const onSubmitMove = function (event) {
 
 const onGetIndex = function (event) {
   event.preventDefault()
-  const data = getFormFields(event.target)
-  gameApi.indexGame(data)
-    .done(gameUi.success)
+  // const data = getFormFields(event.target)
+  gameApi.indexGame()
+    .done(gameUi.successIndex)
     .fail(gameUi.fail)
 }
 
 const gameEventHandlers = () => {
   $('.new-game').on('submit', onNewGame)
   $('#game-info').on('submit', onSubmitMove)
+  $('#game-statistics').on('submit', onGetIndex)
 }
 
 module.exports = {
-  gameEventHandlers,
-  onGetIndex
+  gameEventHandlers
 }

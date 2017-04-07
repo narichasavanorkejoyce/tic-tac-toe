@@ -13,7 +13,7 @@ const resetBoard = function () {
   $('#8').html('')
   $('#game-array-index').val('index')
   $('#move-marker').val('marker')
-  $('#game-outcome').val('outcome')
+  $('#game-over').val('over')
   gameArray = new Array()
   console.log(gameArray)
 }
@@ -77,37 +77,38 @@ const checkWin = function (slotValue) {
   // Check whether there is a winning combination
   if ($('#0').html() !== '' && $('#0').html() === $('#1').html() && $('#0').html() === $('#2').html()) {
     // Populate the outcome input
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#0').html() !== '' && $('#0').html() === $('#3').html() && $('#0').html() === $('#6').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#0').html() !== '' && $('#0').html() === $('#4').html() && $('#0').html() === $('#8').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#2').html() !== '' && $('#2').html() === $('#4').html() && $('#2').html() === $('#6').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#1').html() !== '' && $('#1').html() === $('#4').html() && $('#1').html() === $('#7').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#2').html() !== '' && $('#2').html() === $('#5').html() && $('#2').html() === $('#8').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#6').html() !== '' && $('#6').html() === $('#7').html() && $('#6').html() === $('#8').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else if ($('#3').html() !== '' && $('#3').html() === $('#4').html() && $('#3').html() === $('#5').html()) {
-    $('#game-outcome').val('true')
+    $('#game-over').val('true')
     return console.log('You found a match!')
   } else {
     // Populate the outcome input
-    $('#game-outcome').val('false')
+    $('#game-over').val('false')
   }
 }
 
 const checkDraw = function (lengthArray) {
-  if (lengthArray === 8 & $('#game-outcome').val() === 'false') {
+  if (lengthArray === 8 & $('#game-over').val() === 'false') {
+    $('#game-over').val('true')
     return console.log('There is a draw!')
   }
 }
