@@ -1,5 +1,6 @@
 // let numMoves = 0
 let gameArray = []
+let winner = ''
 
 const resetBoard = function () {
   $('#0').html('')
@@ -16,6 +17,7 @@ const resetBoard = function () {
   $('#game-over').val('over')
   gameArray = new Array()
   console.log(gameArray)
+  $('.game-result').text('')
 }
 
 const gameBoard = function (event) {
@@ -37,7 +39,7 @@ const gameBoard = function (event) {
     // Add 1 to the numMoves counter
     // numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
-    checkWin('X')
+    checkWinX()
     checkDraw(lengthArray)
     // Remove the undefined elements in an array
     // cleanArray(gameArray)
@@ -58,7 +60,7 @@ const gameBoard = function (event) {
     // Add 1 to the numMoves counter
     // numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
-    checkWin('O')
+    checkWinO()
     checkDraw(lengthArray)
     // Remove the undefined elements in an array
     // cleanArray(gameArray)
@@ -73,31 +75,70 @@ const gameBoard = function (event) {
   $('#game-info').submit()
 }
 
-const checkWin = function (slotValue) {
+const checkWinX = function () {
   // Check whether there is a winning combination
-  if ($('#0').html() !== '' && $('#0').html() === $('#1').html() && $('#0').html() === $('#2').html()) {
+  if ($('#0').html() === 'X' && $('#0').html() === $('#1').html() && $('#0').html() === $('#2').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
     // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#0').html() !== '' && $('#0').html() === $('#3').html() && $('#0').html() === $('#6').html()) {
+  } else if ($('#0').html() === 'X' && $('#0').html() === $('#3').html() && $('#0').html() === $('#6').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#0').html() !== '' && $('#0').html() === $('#4').html() && $('#0').html() === $('#8').html()) {
+  } else if ($('#0').html() === 'X' && $('#0').html() === $('#4').html() && $('#0').html() === $('#8').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#2').html() !== '' && $('#2').html() === $('#4').html() && $('#2').html() === $('#6').html()) {
+  } else if ($('#2').html() === 'X' && $('#2').html() === $('#4').html() && $('#2').html() === $('#6').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#1').html() !== '' && $('#1').html() === $('#4').html() && $('#1').html() === $('#7').html()) {
+  } else if ($('#1').html() === 'X' && $('#1').html() === $('#4').html() && $('#1').html() === $('#7').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#2').html() !== '' && $('#2').html() === $('#5').html() && $('#2').html() === $('#8').html()) {
+  } else if ($('#2').html() === 'X' && $('#2').html() === $('#5').html() && $('#2').html() === $('#8').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#6').html() !== '' && $('#6').html() === $('#7').html() && $('#6').html() === $('#8').html()) {
+  } else if ($('#6').html() === 'X' && $('#6').html() === $('#7').html() && $('#6').html() === $('#8').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
-  } else if ($('#3').html() !== '' && $('#3').html() === $('#4').html() && $('#3').html() === $('#5').html()) {
+  } else if ($('#3').html() === 'X' && $('#3').html() === $('#4').html() && $('#3').html() === $('#5').html()) {
+    // Assign winner variable to 'X'
+    winner = 'X'
+    // Display that player 'X' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
     $('#game-over').val('true')
     return console.log('You found a match!')
   } else {
@@ -106,9 +147,115 @@ const checkWin = function (slotValue) {
   }
 }
 
+const checkWinO = function () {
+  // Check whether there is a winning combination
+  if ($('#0').html() === 'O' && $('#0').html() === $('#1').html() && $('#0').html() === $('#2').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#0').html() === 'O' && $('#0').html() === $('#3').html() && $('#0').html() === $('#6').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#0').html() === 'O' && $('#0').html() === $('#4').html() && $('#0').html() === $('#8').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#2').html() === 'O' && $('#2').html() === $('#4').html() && $('#2').html() === $('#6').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#1').html() === 'O' && $('#1').html() === $('#4').html() && $('#1').html() === $('#7').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#2').html() === 'O' && $('#2').html() === $('#5').html() && $('#2').html() === $('#8').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#6').html() === 'O' && $('#6').html() === $('#7').html() && $('#6').html() === $('#8').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else if ($('#3').html() === 'O' && $('#3').html() === $('#4').html() && $('#3').html() === $('#5').html()) {
+    // Assign winner variable to 'O'
+    winner = 'O'
+    // Display that player 'O' won
+    $('.game-result').text('Player ' + winner + ' won!')
+    // Populate the outcome input
+    $('#game-over').val('true')
+    return console.log('You found a match!')
+  } else {
+    // Populate the outcome input
+    $('#game-over').val('false')
+  }
+}
+
+// const checkWin = function (slotValue) {
+//   // Check whether there is a winning combination
+//   if ($('#0').html() !== '' && $('#0').html() === $('#1').html() && $('#0').html() === $('#2').html()) {
+//     // Populate the outcome input
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#0').html() !== '' && $('#0').html() === $('#3').html() && $('#0').html() === $('#6').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#0').html() !== '' && $('#0').html() === $('#4').html() && $('#0').html() === $('#8').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#2').html() !== '' && $('#2').html() === $('#4').html() && $('#2').html() === $('#6').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#1').html() !== '' && $('#1').html() === $('#4').html() && $('#1').html() === $('#7').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#2').html() !== '' && $('#2').html() === $('#5').html() && $('#2').html() === $('#8').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#6').html() !== '' && $('#6').html() === $('#7').html() && $('#6').html() === $('#8').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else if ($('#3').html() !== '' && $('#3').html() === $('#4').html() && $('#3').html() === $('#5').html()) {
+//     $('#game-over').val('true')
+//     return console.log('You found a match!')
+//   } else {
+//     // Populate the outcome input
+//     $('#game-over').val('false')
+//   }
+// }
+
 const checkDraw = function (lengthArray) {
   if (lengthArray === 8 & $('#game-over').val() === 'false') {
     $('#game-over').val('true')
+    $('.game-result').text('There is a draw!')
     return console.log('There is a draw!')
   }
 }
