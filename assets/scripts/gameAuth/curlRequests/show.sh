@@ -2,10 +2,10 @@
 # sh assets/scripts/gameAuth/curlRequests/show.sh
 
 # Need to input the ID of the game, not the user!
-curl "http://localhost:4741/games/3" \
+curl "http://localhost:4741/games/214" \
   --include \
   --request GET \
-  --header "Authorization: Token token=BAhJIiVmNjlkZDRhMWVjZWM0NWExY2Y1ZjEzZTliNzUzMjUzZgY6BkVG--38426144104a84bc42d99efdfc7c145dcb9873c0"
+  --header "Authorization: Token token=BAhJIiUzMWVhMDdkMDZlZDRmNGI1ZmYxMGI5MzBiNzg4OTEyMAY6BkVG--f665bd21c626fff1c2d23ae20e76475351054559"
 # data output from curl doesn't have a trailing newline
 echo
 
