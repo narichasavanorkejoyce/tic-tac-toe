@@ -1,4 +1,4 @@
-let numMoves = 0
+// let numMoves = 0
 let gameArray = []
 
 const resetBoard = function () {
@@ -14,13 +14,8 @@ const resetBoard = function () {
   $('#game-array-index').val('index')
   $('#move-marker').val('marker')
   $('#game-outcome').val('outcome')
-  // const gameArray = []
   gameArray = new Array()
   console.log(gameArray)
-  // return gameArray
-  // const numMoves = 0
-  // console.log(numMoves)
-  // return numMoves
 }
 
 const gameBoard = function (event) {
@@ -40,9 +35,10 @@ const gameBoard = function (event) {
     // Populate the marker input
     $('#move-marker').val('X')
     // Add 1 to the numMoves counter
-    numMoves = numMoves + 1
+    // numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
     checkWin('X')
+    checkDraw(lengthArray)
     // Remove the undefined elements in an array
     // cleanArray(gameArray)
     // console.log('cleanArray is ' + cleanArray())
@@ -60,9 +56,10 @@ const gameBoard = function (event) {
     // Populate the marker input
     $('#move-marker').val('O')
     // Add 1 to the numMoves counter
-    numMoves = numMoves + 1
+    // numMoves = numMoves + 1
     // Check whether this move resulted in a winning combo
     checkWin('O')
+    checkDraw(lengthArray)
     // Remove the undefined elements in an array
     // cleanArray(gameArray)
     // console.log(cleanArray)
@@ -72,7 +69,7 @@ const gameBoard = function (event) {
   } else if ($(this).html() !== '') {
     console.log('Please pick another slot')
   }
-  console.log(numMoves)
+  // console.log(numMoves)
   $('#game-info').submit()
 }
 
@@ -109,11 +106,11 @@ const checkWin = function (slotValue) {
   }
 }
 
-// const checkDraw = function () {
-//   if ($('.slot').html() !== '') {
-//     return console.log('There is a draw!')
-//   }
-// }
+const checkDraw = function (lengthArray) {
+  if (lengthArray === 8 & $('#game-outcome').val() === 'false') {
+    return console.log('There is a draw!')
+  }
+}
 
 const gameLogicHandlers = () => {
   $('.new-game').on('submit', resetBoard)
