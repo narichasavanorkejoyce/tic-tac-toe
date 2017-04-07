@@ -1,34 +1,28 @@
 const checkWin = function (slotValue) {
+  // Check whether there is a winning combination
   if ($('#0').html() !== '' && $('#0').html() === $('#1').html() && $('#0').html() === $('#2').html()) {
-    // location.reload()
+    // Populate the outcome input
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#0').html() !== '' && $('#0').html() === $('#3').html() && $('#0').html() === $('#6').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#0').html() !== '' && $('#0').html() === $('#4').html() && $('#0').html() === $('#8').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#2').html() !== '' && $('#2').html() === $('#4').html() && $('#2').html() === $('#6').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#1').html() !== '' && $('#1').html() === $('#4').html() && $('#1').html() === $('#7').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#2').html() !== '' && $('#2').html() === $('#5').html() && $('#2').html() === $('#8').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#6').html() !== '' && $('#6').html() === $('#7').html() && $('#6').html() === $('#8').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else if ($('#3').html() !== '' && $('#3').html() === $('#4').html() && $('#3').html() === $('#5').html()) {
-    // location.reload()
     $('#game-outcome').val('true')
     return console.log('You found a match!')
   } else {
@@ -41,10 +35,6 @@ const checkDraw = function () {
   if ($('.slot').html() !== '') {
     return console.log('There is a draw!')
   }
-}
-
-const clearBoard = function () {
-  location.reload()
 }
 
 let numMoves = 0
@@ -96,9 +86,7 @@ const gameBoard = function (event) {
 }
 
 const gameLogicHandlers = () => {
-  // $('#sign-up').on('submit', onSignUp)
   $('.slot').on('click', gameBoard)
-  $('#play-again').on('submit', clearBoard)
 }
 
 module.exports = {

@@ -24,11 +24,14 @@ games#index
 games#create
 - Response 201, created (curl script)
 - Using a POST request, a game object is created
+- The board will clear. Each `<div>` value will be set to `''`
 
 games#show
 - Response 200, ok (curl script)
 
 games#update
+- Using a PATCH request, the game object will update when
+  a player makes a move on the game board
 
 games#watch
 
