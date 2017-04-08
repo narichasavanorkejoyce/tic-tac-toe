@@ -1,29 +1,38 @@
 $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 
-$background-color: #fff;
+// $background-color: #7O8O9O;
 $font-color: #000;
-$black: #000;
+$white: #fff;
 
-h1 {
+h1, h3 {
+  color: $white;
   text-align: center;
 }
 
 body {
-  background-color: $background-color;
+  background-image: url('http://i.imgur.com/wXdiODD.jpg');
+  background-size: cover;
   color: $font-color;
 }
 
 .box {
-  border: .25px solid $black;
+  border: .25px solid $white;
+}
+
+.gameboard {
+  align-self: center;
 }
 
 .col-xs-4 {
-  height: 200px;
-  width: 220px;
+  height: 250px;
+  width: 250px;
+  align-items: center;
+  align-content: center;
 }
 
 .slot {
+  color: $white;
   font-size: 48px;
   padding: 10%;
   text-align: center;
