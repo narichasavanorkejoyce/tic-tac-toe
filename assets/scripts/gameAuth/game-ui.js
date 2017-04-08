@@ -1,5 +1,6 @@
 'use strict'
 const store = require('../store.js')
+const statistics = require('../gameStatistics.js')
 
 const successNewGame = (data) => {
   console.log('successNewGame worked!')
@@ -18,6 +19,8 @@ const successIndex = (data) => {
   // store.game = data.game
   // console.log(store)
   console.log(data)
+  statistics.checkWinX(data.games)
+  statistics.checkWinO(data.games)
   console.log(data.games.length)
   $('#num-games-completed').val(data.games.length)
 }
