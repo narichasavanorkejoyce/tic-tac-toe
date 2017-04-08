@@ -5,8 +5,15 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $font-color: #000;
 $white: #fff;
 
-h1, h3 {
+h1{
   color: $white;
+  font-family: 'Fredericka the Great', cursive;
+  text-align: left;
+}
+
+h3{
+  color: $white;
+  font-family: 'Fredericka the Great', cursive;
   text-align: center;
 }
 
@@ -20,20 +27,25 @@ body {
   border: .25px solid $white;
 }
 
-.gameboard {
-  align-self: center;
+.game-statistics {
+  align-items: center;
 }
 
-.col-xs-4 {
-  height: 250px;
-  width: 250px;
-  align-items: center;
-  align-content: center;
+// .gameboard {
+//   align-self: center;
+// }
+
+.col-xs-2 {
+  height: 200px;
+  // width: 250px;
+  // align-items: center;
+  // align-content: center;
 }
 
 .slot {
   color: $white;
+  font-family: 'Fredericka the Great', cursive;
   font-size: 48px;
-  padding: 10%;
+  padding: 5%;
   text-align: center;
 }
