@@ -5,6 +5,7 @@ const config = require('./config')
 const authEvents = require('./auth/events.js')
 const gameEvents = require('./gameAuth/game-events.js')
 const gameLogic = require('./gameLogic')
+const uxLogic = require('./uxLogic')
 
 // On document ready
 
@@ -26,6 +27,11 @@ $(() => {
 // Bring in game events
 $(() => {
   gameEvents.gameEventHandlers()
+})
+
+// Bring in ux logic functions
+$(() => {
+  uxLogic.uxLogicHandlers()
 })
 
 // use require with a reference to bundle the file and use it in this file
