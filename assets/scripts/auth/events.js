@@ -8,8 +8,8 @@ const onSignUp = function (event) {
   event.preventDefault()
   const data = getFormFields(event.target)
   api.signUp(data)
-  .done(ui.success)
-  .fail(ui.fail)
+  .done(ui.successSignUp)
+  .fail(ui.failureSignUp)
 }
 
 const onSignIn = function (event) {

@@ -73,7 +73,7 @@ const gameBoard = function (event) {
   // } else if (numMoves === 8) {
   //   checkDraw()
   } else if ($(this).html() !== '') {
-    console.log('Please pick another slot')
+    console.log('Please Pick Another Slot')
   }
   // console.log(numMoves)
   $('#game-info').submit()
@@ -87,8 +87,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -101,8 +101,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -115,8 +115,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -129,8 +129,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -143,8 +143,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -157,8 +157,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -171,8 +171,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -184,8 +184,8 @@ const checkWinX = function () {
     // winCountX = winCountX + 1
     // console.log('winCountX is ' + winCountX)
     // $('.num-x-wins').val(winCountX)
-    // Display that player 'X' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'X' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -206,8 +206,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -219,8 +219,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -232,8 +232,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -245,8 +245,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -258,8 +258,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -271,8 +271,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -284,8 +284,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot
@@ -297,8 +297,8 @@ const checkWinO = function () {
     // winCountO = winCountO + 1
     // console.log('winCountO is ' + winCountO)
     // $('.num-x-wins').val(winCountO)
-    // Display that player 'O' won
-    $('.game-result').text('Player ' + winner + ' won!')
+    // Display that player 'O' Won
+    $('.game-result').text('Player ' + winner + ' Won!')
     // Populate the outcome input
     $('#game-over').val('true')
     // Turn off ability to click a slot

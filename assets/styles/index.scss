@@ -11,6 +11,10 @@ h1{
   text-align: left;
 }
 
+.login-responses {
+  color: $white;
+}
+
 h3{
   color: $white;
   font-family: 'Fredericka the Great', cursive;
@@ -21,6 +25,7 @@ body {
   background-image: url('http://i.imgur.com/wXdiODD.jpg');
   background-size: cover;
   color: $font-color;
+  min-width: 800px;
 }
 
 .box {

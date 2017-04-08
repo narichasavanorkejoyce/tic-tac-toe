@@ -15,7 +15,7 @@
 </head>
 
 <body class="container-fluid">
-  <h1>Tic Tac Toe</h1>
+  <h1>TIC TAC TOE</h1>
 
 <div id="user-logs-in">
 <br>
@@ -26,6 +26,7 @@
       <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password">
       <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation" id="sign-up-confirm">
       <input type="submit" name="submit" value="Sign up!">
+      <div class="login-responses" id="sign-up-response">&nbsp;</div>
     </fieldset>
   </form>
 <br>
@@ -35,6 +36,7 @@
       <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email">
       <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password">
       <input type="submit" name="submit" value="Sign in!">
+      <div class="login-responses" id="sign-in-response">&nbsp;</div>
     </fieldset>
   </form>
 <br>
@@ -99,9 +101,10 @@
 <form id="change-password">
   <fieldset>
     <!-- <legend>Change Password</legend> -->
-    <input type="submit" name="submit" value="Change Password">
-    <input type="password" name="passwords[old]" value="" placeholder="Old Password">
-    <input type="password" name="passwords[new]" value="" placeholder="New Password">
+    <input type="submit" name="submit" value="Change Password" id="change-pwd">
+    <input type="password" name="passwords[old]" value="" placeholder="Old Password" id="old-password">
+    <input type="password" name="passwords[new]" value="" placeholder="New Password" id="new-password">
+    <div id="change-pwd-inst">&nbsp;</div>
   </fieldset>
 </form>
 <br>

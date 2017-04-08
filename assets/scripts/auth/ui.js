@@ -4,6 +4,7 @@ const store = require('../store.js')
 const signInSuccess = (data) => {
   store.user = data.user
   console.log(store)
+  $('#sign-in-response').text('Success! Click "Start!" to play the game.')
 }
 
 const signOutSuccess = () => {
@@ -15,8 +16,14 @@ const changePasswordSuccess = () => {
   console.log('Password Successfully Changed.')
 }
 
-const success = (data) => {
+const successSignUp = (data) => {
   console.log(data)
+  $('#sign-up-response').text('Awesome! Now, please sign in.')
+}
+
+const failureSignUp = (error) => {
+  console.error(error)
+  $('#sign-up-response').text('User already exists.')
 }
 
 const failure = (error) => {
@@ -25,8 +32,9 @@ const failure = (error) => {
 
 module.exports = {
   failure,
-  success,
   signInSuccess,
   signOutSuccess,
-  changePasswordSuccess
+  changePasswordSuccess,
+  failureSignUp,
+  successSignUp
 }
