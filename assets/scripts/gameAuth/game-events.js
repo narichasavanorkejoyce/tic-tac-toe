@@ -14,10 +14,10 @@ const onNewGame = function (event) {
 
 const onSubmitMove = function (event) {
   event.preventDefault()
-  console.log('onSubmitMove worked!')
+  // console.log('onSubmitMove worked!')
   const data = getFormFields(this)
-  console.log(this)
-  console.log(event.target)
+  // console.log(this)
+  // console.log(event.target)
   gameApi.submitMove(data)
     .done(gameUi.successMove)
     .fail(gameUi.fail)

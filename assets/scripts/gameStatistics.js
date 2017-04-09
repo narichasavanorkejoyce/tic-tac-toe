@@ -29,7 +29,7 @@ const checkWinX = function (object) {
       winsX = winsX + 1
     }
   }
-  console.log('winsX equals ' + winsX)
+  // console.log('winsX equals ' + winsX)
   $('#num-x-wins').val(winsX + '/' + object.length)
   return winsX
 }
@@ -65,7 +65,7 @@ const checkWinO = function (object) {
       winsO = winsO + 1
     }
   }
-  console.log('winsO equals ' + winsO)
+  // console.log('winsO equals ' + winsO)
   $('#num-o-wins').val(winsO + '/' + object.length)
   return winsO
 }

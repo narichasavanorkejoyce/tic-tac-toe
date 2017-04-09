@@ -3,30 +3,30 @@ const store = require('../store.js')
 const statistics = require('../gameStatistics.js')
 
 const successNewGame = (data) => {
-  console.log('successNewGame worked!')
+  // console.log('successNewGame worked!')
   store.game = data.game
-  console.log(store)
+  // console.log(store)
 }
 
 const successMove = (data) => {
-  console.log('successMove worked!')
-  console.log(data)
+  // console.log('successMove worked!')
+  // console.log(data)
   // store.game = data.game
 }
 
 const successIndex = (data) => {
-  console.log('successIndex worked!')
+  // console.log('successIndex worked!')
   // store.game = data.game
   // console.log(store)
-  console.log(data)
+  // console.log(data)
   statistics.checkWinX(data.games)
   statistics.checkWinO(data.games)
-  console.log(data.games.length)
+  // console.log(data.games.length)
   $('#num-games-completed').val(data.games.length)
 }
 
-const failure = (error) => {
-  console.error(error)
+const failure = () => {
+  // console.error(error)
 }
 
 module.exports = {

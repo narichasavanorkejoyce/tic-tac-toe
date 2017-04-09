@@ -4,7 +4,7 @@ const config = require('../config')
 const store = require('../store')
 
 const newGame = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/games',
     method: 'POST',
@@ -15,8 +15,8 @@ const newGame = function (data) {
 }
 
 const submitMove = function (data) {
-  console.log(data)
-  console.log(store)
+  // console.log(data)
+  // console.log(store)
   return $.ajax({
     url: config.apiOrigin + '/games/' + store.game.id,
     method: 'PATCH',
@@ -28,7 +28,7 @@ const submitMove = function (data) {
 }
 
 const indexGame = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/games?over=true',
     method: 'GET',

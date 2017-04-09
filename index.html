@@ -17,114 +17,114 @@
 <body class="container-fluid">
   <h1>TIC TAC TOE</h1>
 
-<div id="user-logs-in">
-<br>
-  <form id="sign-up">
-    <fieldset>
-      <!-- <legend>Sign up!</legend> -->
-      <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-up-email">
-      <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password">
-      <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation" id="sign-up-confirm">
-      <input type="submit" name="submit" value="Sign up!">
-      <div class="auth-responses" id="sign-up-response">&nbsp;</div>
-    </fieldset>
-  </form>
-<br>
-  <form id="sign-in">
-    <fieldset>
-      <!-- <legend>Sign in!</legend> -->
-      <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email">
-      <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password">
-      <input type="submit" name="submit" value="Sign in!">
-      <div class="auth-responses" id="sign-in-response">&nbsp;</div>
-    </fieldset>
-  </form>
-<br>
-<form class="new-game" id="user-starts-game">
-  <fieldset>
-    <input type="submit" name="submit" value="Start!">
-  </fieldset>
-</form>
-</div>
-
-<br>
-
-<div id="play-tic-tac-toe">
-<form class="new-game">
-  <fieldset>
-    <input type="submit" name="submit" value="Play Again!">
-  </fieldset>
-</form>
-<br>
-  <h3 class="game-result"></h3>
-<br>
-  <div class="container">
-    <!-- Construct a 3x3 Grid -->
-    <form class="gameboard">
-    <div class="row">
-      <div class="col-xs-3 edge"></div>
-      <div class="col-xs-2 box slot" id="0"></div>
-      <div class="col-xs-2 box slot" id="1"></div>
-      <div class="col-xs-2 box slot" id="2"></div>
-      <div class="col-xs-3 edge"></div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3 edge"></div>
-      <div class="col-xs-2 box slot" id="3"></div>
-      <div class="col-xs-2 box slot" id="4"></div>
-      <div class="col-xs-2 box slot" id="5"></div>
-      <div class="col-xs-3 edge"></div>
-    </div>
-    <div class="row">
-      <div class="col-xs-3 edge"></div>
-      <div class="col-xs-2 box slot" id="6"></div>
-      <div class="col-xs-2 box slot" id="7"></div>
-      <div class="col-xs-2 box slot" id="8"></div>
-      <div class="col-xs-3 edge"></div>
-    </div>
-  </form>
+  <div id="user-logs-in">
+    <br>
+    <form id="sign-up">
+      <fieldset>
+        <!-- <legend>Sign up!</legend> -->
+        <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-up-email">
+        <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password">
+        <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation" id="sign-up-confirm">
+        <input type="submit" name="submit" value="Sign up!">
+        <div class="auth-responses" id="sign-up-response">&nbsp;</div>
+      </fieldset>
+    </form>
+    <br>
+    <form id="sign-in">
+      <fieldset>
+        <!-- <legend>Sign in!</legend> -->
+        <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email">
+        <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password">
+        <input type="submit" name="submit" value="Sign in!">
+        <div class="auth-responses" id="sign-in-response">&nbsp;</div>
+      </fieldset>
+    </form>
+    <br>
+    <form class="new-game" id="user-starts-game">
+      <fieldset>
+        <input type="submit" name="submit" value="Start!">
+      </fieldset>
+    </form>
   </div>
-<br>
-<form id="game-info">
-  <input name="game[cell][index]" type="text" value="index" id="game-array-index">
-  <input name="game[cell][value]" type="text" value="marker" id="move-marker">
-  <input name="game[over]" type="text" value="over" id="game-over">
-</form>
-<br>
-<form id="game-statistics">
-  <input type="submit" name="submit" value="Click for Game Statistics!">
-  <div class="stats">&nbsp;</div>
-  <div class="stats"># of Games Played:</div>
-  <input type="text" id="num-games-completed" placeholder="# Games">
-  <div class="stats">&nbsp;</div>
-  <div class="stats"># of X Wins:</div>
-  <input type="text" id="num-x-wins" placeholder="# X Wins">
-  <div class="stats">&nbsp;</div>
-  <div class="stats"># of O Wins:</div>
-  <input type="text" id="num-o-wins" placeholder="# O Wins">
-</form>
-<br>
-<form id="sign-out">
-  <fieldset>
-    <!-- <legend>Sign out!</legend> -->
-    <input type="submit" name="submit" value="Sign out!">
-  </fieldset>
-</form>
-<br>
-<button value="Change Password" id="change-pwd">Change Password</button>
-<br>
-<form id="change-password">
-  <fieldset>
-    <!-- <legend>Change Password</legend> -->
-    <input type="password" name="passwords[old]" value="" placeholder="Old Password" id="old-password">
-    <input type="password" name="passwords[new]" value="" placeholder="New Password" id="new-password">
-    <input type="submit" name="submit" value="Submit" id="submit-change-pwd">
-    <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
-  </fieldset>
-</form>
-<br>
 
-</div>
+  <br>
+
+  <div id="play-tic-tac-toe">
+    <form class="new-game">
+      <fieldset>
+        <input type="submit" name="submit" value="Play Again!">
+      </fieldset>
+    </form>
+    <br>
+    <h3 class="game-result"></h3>
+    <br>
+    <div class="container">
+      <!-- Construct a 3x3 Grid -->
+      <form class="gameboard">
+        <div class="row">
+          <div class="col-xs-3 edge"></div>
+          <div class="col-xs-2 box slot" id="0"></div>
+          <div class="col-xs-2 box slot" id="1"></div>
+          <div class="col-xs-2 box slot" id="2"></div>
+          <div class="col-xs-3 edge"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 edge"></div>
+          <div class="col-xs-2 box slot" id="3"></div>
+          <div class="col-xs-2 box slot" id="4"></div>
+          <div class="col-xs-2 box slot" id="5"></div>
+          <div class="col-xs-3 edge"></div>
+        </div>
+        <div class="row">
+          <div class="col-xs-3 edge"></div>
+          <div class="col-xs-2 box slot" id="6"></div>
+          <div class="col-xs-2 box slot" id="7"></div>
+          <div class="col-xs-2 box slot" id="8"></div>
+          <div class="col-xs-3 edge"></div>
+        </div>
+      </form>
+    </div>
+    <br>
+    <form id="game-info">
+      <input name="game[cell][index]" type="text" value="index" id="game-array-index">
+      <input name="game[cell][value]" type="text" value="marker" id="move-marker">
+      <input name="game[over]" type="text" value="over" id="game-over">
+    </form>
+    <br>
+    <form id="game-statistics">
+      <input type="submit" name="submit" value="Click for Game Statistics!">
+      <div class="stats">&nbsp;</div>
+      <div class="stats"># of Games Played:</div>
+      <input type="text" id="num-games-completed" placeholder="# Games">
+      <div class="stats">&nbsp;</div>
+      <div class="stats"># of X Wins:</div>
+      <input type="text" id="num-x-wins" placeholder="# X Wins">
+      <div class="stats">&nbsp;</div>
+      <div class="stats"># of O Wins:</div>
+      <input type="text" id="num-o-wins" placeholder="# O Wins">
+    </form>
+    <br>
+    <form id="sign-out">
+      <fieldset>
+        <!-- <legend>Sign out!</legend> -->
+        <input type="submit" name="submit" value="Sign out!">
+      </fieldset>
+    </form>
+    <br>
+    <button value="Change Password" id="change-pwd">Change Password</button>
+    <br>
+    <form id="change-password">
+      <fieldset>
+        <!-- <legend>Change Password</legend> -->
+        <input type="password" name="passwords[old]" value="" placeholder="Old Password" id="old-password">
+        <input type="password" name="passwords[new]" value="" placeholder="New Password" id="new-password">
+        <input type="submit" name="submit" value="Submit" id="submit-change-pwd">
+        <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
+      </fieldset>
+    </form>
+    <br>
+
+  </div>
 
 </body>
 

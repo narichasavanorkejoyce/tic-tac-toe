@@ -2,12 +2,9 @@
 
 const config = require('../config')
 const store = require('../store')
-// const getFormFields = require('../../../lib/get-form-fields.js');
-
-// authApi.signUp(authUi.success, authUi.failure, data);
 
 const signUp = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-up/',
     method: 'POST',
@@ -16,7 +13,7 @@ const signUp = function (data) {
 }
 
 const signIn = function (data) {
-  console.log(data)
+  // console.log(data)
   return $.ajax({
     url: config.apiOrigin + '/sign-in/',
     method: 'POST',
@@ -25,7 +22,7 @@ const signIn = function (data) {
 }
 
 const signOut = function () {
-  console.log(store.user.id)
+  // console.log(store.user.id)
   return $.ajax({
     method: 'DELETE',
     url: config.apiOrigin + '/sign-out/' + store.user.id,
