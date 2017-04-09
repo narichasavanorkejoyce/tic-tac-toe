@@ -16,6 +16,10 @@ h1 {
   color: $white;
 }
 
+.stats {
+  color: $white;
+}
+
 h3 {
   color: $white;
   font-family: 'Fredericka the Great', cursive;
@@ -36,10 +40,6 @@ body {
 .game-statistics {
   align-items: center;
 }
-
-// .gameboard {
-//   align-self: center;
-// }
 
 .col-xs-2 {
   height: 200px;

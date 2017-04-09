@@ -8,6 +8,9 @@ const uxLogicHandlers = () => {
     $('#old-password').hide().val('')
     $('#new-password').hide().val('')
     $('#submit-change-pwd').hide()
+    $('#num-games-completed').val('')
+    $('#num-x-wins').val('')
+    $('#num-o-wins').val('')
   })
 
   $('#sign-out').on('submit', function () {
