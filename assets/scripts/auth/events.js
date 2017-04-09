@@ -17,7 +17,7 @@ const onSignIn = function (event) {
   const data = getFormFields(event.target)
   api.signIn(data)
   .done(ui.signInSuccess)
-  .fail(ui.fail)
+  .fail(ui.signInFail)
 }
 
 const onSignOut = function (event) {

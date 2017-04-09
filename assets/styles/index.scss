@@ -5,9 +5,10 @@ $icon-font-path: '~bootstrap-sass/assets/fonts/bootstrap/';
 $font-color: #000;
 $white: #fff;
 
-h1{
+h1 {
   color: $white;
   font-family: 'Fredericka the Great', cursive;
+  font-size: 48px;
   text-align: left;
 }
 
@@ -15,7 +16,7 @@ h1{
   color: $white;
 }
 
-h3{
+h3 {
   color: $white;
   font-family: 'Fredericka the Great', cursive;
   text-align: center;

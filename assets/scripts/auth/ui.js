@@ -23,7 +23,12 @@ const successSignUp = (data) => {
 
 const failureSignUp = (error) => {
   console.error(error)
-  $('#sign-up-response').text('User already exists.')
+  $('#sign-up-response').text('User already exists. Please sign in.')
+}
+
+const signInFail = (error) => {
+  console.error(error)
+  $('#sign-in-response').text('Wrong password. Please try again.')
 }
 
 const failure = (error) => {
@@ -33,6 +38,7 @@ const failure = (error) => {
 module.exports = {
   failure,
   signInSuccess,
+  signInFail,
   signOutSuccess,
   changePasswordSuccess,
   failureSignUp,

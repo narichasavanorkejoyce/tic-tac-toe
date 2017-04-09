@@ -17,13 +17,13 @@ const uxLogicHandlers = () => {
     $('#sign-in-password').val('')
     $('.login-responses').text('')
   })
-  $('#old-password').hide()
-  $('#new-password').hide()
-  $('#change-pwd').on('submit', function () {
-    $('#old-password').show()
-    $('#new-password').show()
-    $('#change-pwd-inst').text('Please enter a new password. Then, click "Change Password" again.')
-  })
+  // $('#old-password').hide()
+  // $('#new-password').hide()
+  // $('#change-pwd').on('submit', function () {
+  //   $('#old-password').show()
+  //   $('#new-password').show()
+  //   $('#change-pwd-inst').text('Please enter a new password. Then, click "Change Password" again.')
+  // })
 }
 
 module.exports = {
