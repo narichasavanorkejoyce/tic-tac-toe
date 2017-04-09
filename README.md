@@ -1,4 +1,14 @@
-[![General Assembly Logo](https://camo.githubusercontent.com/1a91b05b8f4d44b5bbfb83abac2b0996d8e26c92/687474703a2f2f692e696d6775722e636f6d2f6b6538555354712e706e67)](https://generalassemb.ly/education/web-development-immersive)
+# TIC TAC TOE
+
+Long ago, the Romans invented a game called Terni Lapilli. By the 1800s, that game had evolved into what we know as tic-tac-toe (or noughts & crosses, or Xs & Os). Grab a friend and play my version of this classic game!
+
+App: [tic-tac-toe](https://narichasavanorkejoyce.github.io/tic-tac-toe/)
+
+[Imgur](http://i.imgur.com/WFGvJdP.png)
+
+
+# Technology Used
+
 
 # API End-Points [game-project-api]
 
