@@ -33,7 +33,7 @@ const onChangePassword = function (event) {
   const data = getFormFields(event.target)
   api.changePassword(data)
   .done(ui.changePasswordSuccess)
-  .fail(ui.fail)
+  .fail(ui.changePasswordFail)
 }
 
 const addHandlers = () => {

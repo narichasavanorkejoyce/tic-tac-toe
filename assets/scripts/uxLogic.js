@@ -5,6 +5,9 @@ const uxLogicHandlers = () => {
   $('#user-starts-game').on('submit', function () {
     $('#play-tic-tac-toe').show()
     $('#user-logs-in').hide()
+    $('#old-password').hide().val('')
+    $('#new-password').hide().val('')
+    $('#submit-change-pwd').hide()
   })
 
   $('#sign-out').on('submit', function () {
@@ -15,15 +18,14 @@ const uxLogicHandlers = () => {
     $('#sign-up-confirm').val('')
     $('#sign-in-email').val('')
     $('#sign-in-password').val('')
-    $('.login-responses').text('')
+    $('.auth-responses').text('')
   })
-  // $('#old-password').hide()
-  // $('#new-password').hide()
-  // $('#change-pwd').on('submit', function () {
-  //   $('#old-password').show()
-  //   $('#new-password').show()
-  //   $('#change-pwd-inst').text('Please enter a new password. Then, click "Change Password" again.')
-  // })
+
+  $('#change-pwd').on('click', function () {
+    $('#old-password').show()
+    $('#new-password').show()
+    $('#submit-change-pwd').show()
+  })
 }
 
 module.exports = {

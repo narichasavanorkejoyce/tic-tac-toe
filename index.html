@@ -26,7 +26,7 @@
       <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-up-password">
       <input type="password" name="credentials[password_confirmation]" value="" placeholder="password confirmation" id="sign-up-confirm">
       <input type="submit" name="submit" value="Sign up!">
-      <div class="login-responses" id="sign-up-response">&nbsp;</div>
+      <div class="auth-responses" id="sign-up-response">&nbsp;</div>
     </fieldset>
   </form>
 <br>
@@ -36,7 +36,7 @@
       <input type="text" name="credentials[email]" value="" placeholder="email" id="sign-in-email">
       <input type="password" name="credentials[password]" value="" placeholder="password" id="sign-in-password">
       <input type="submit" name="submit" value="Sign in!">
-      <div class="login-responses" id="sign-in-response">&nbsp;</div>
+      <div class="auth-responses" id="sign-in-response">&nbsp;</div>
     </fieldset>
   </form>
 <br>
@@ -98,16 +98,6 @@
   <input type="text" id="num-o-wins" value="# of O Wins">
 </form>
 <br>
-<form id="change-password">
-  <fieldset>
-    <!-- <legend>Change Password</legend> -->
-    <input type="submit" name="submit" value="Change Password" id="change-pwd">
-    <input type="password" name="passwords[old]" value="" placeholder="Old Password" id="old-password">
-    <input type="password" name="passwords[new]" value="" placeholder="New Password" id="new-password">
-    <div id="change-pwd-inst">&nbsp;</div>
-  </fieldset>
-</form>
-<br>
 <form id="sign-out">
   <fieldset>
     <!-- <legend>Sign out!</legend> -->
@@ -115,6 +105,19 @@
   </fieldset>
 </form>
 <br>
+<button value="Change Password" id="change-pwd">Change Password</button>
+<br>
+<form id="change-password">
+  <fieldset>
+    <!-- <legend>Change Password</legend> -->
+    <input type="password" name="passwords[old]" value="" placeholder="Old Password" id="old-password">
+    <input type="password" name="passwords[new]" value="" placeholder="New Password" id="new-password">
+    <input type="submit" name="submit" value="Submit" id="submit-change-pwd">
+    <div class="auth-responses" id="change-pwd-inst">&nbsp;</div>
+  </fieldset>
+</form>
+<br>
+
 </div>
 
 </body>
