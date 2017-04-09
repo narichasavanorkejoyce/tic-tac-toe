@@ -1,123 +1,55 @@
-# TIC TAC TOE
+## Tic Tac Toe
 
 Long ago, the Romans invented a game called Terni Lapilli. By the 1800s, that game had evolved into what we know as tic-tac-toe (or noughts & crosses, or Xs & Os). Grab a friend and play my version of this classic game!
 
 App: [tic-tac-toe](https://narichasavanorkejoyce.github.io/tic-tac-toe/)
 
-[Imgur](http://i.imgur.com/WFGvJdP.png)
+![Imgur](http://i.imgur.com/WFGvJdP.png)
 
+## User Stories
 
-# Technology Used
+- I want to host a browser game on GitHub Pages, deploy online, and share my work through a GitHub git repository.
+- I want to maintain a commit history with detailed commit messages and produce documentation in the form of a README.
+- I want to create a single-page application where users can play a game of tic-tac-toe.
+- I want to write a custom game engine that does not allow players to move in the same square more than once, does not change players after an invalid move, and supports playing multiple games.
+- I want to render a game board in the browser that switches turns between X and O. I want my app to visually display which side won or show a draw
+- I want to use jQuery for DOM manipulation and event handling.
+- I want to use AJAX to visually display the results of retrieving game statistics, create new games on the server, and update a game by storing new moves
+- I want my users to have login, logout, change password functionality.
+- I want my application to be free of bugs and console messages.
+- I want to use semantic HTML and practice separation of concerns.
 
+## Wireframes
+- [tic-tac-toe wireframes](http://i.imgur.com/xcEdk7V.jpg)
 
-# API End-Points [game-project-api]
+## Development Process
 
-users#signup
-- Response: 201, created (curl script)
-- User created using POST request
+Since this was my first experience building a website, I was eager to write some basic code and view it on a deployed GitHub Pages site. I used Bootstrap to quickly create a 3x3 grid. I set up user authorization and added a few log-in features. I typed `grunt deploy`. Then, I had to open my first issue! Turns out, we needed to replace our production URL. Facing this problem right out of the gate taught me how to search through closed issues and ask for help.
 
-users#sign-in
-- Response: 200, ok (curl script)
-- User exists with token using POST request
+Once I was able to successfully deploy, I got to work on the game logic. I used a couple of functions and many conditional statements to switch between X and O, indicate a draw, and refresh the board.
 
-users#sign-out
-- Response: 204, no content (curl script)
-- Using DELETE request, token is deleted and user is set to null
+After I had written most of the game logic, I started working with the API. I found curl requests really helpful - it was much faster to write AJAX requests once I had the blueprint of a successful curl request. I spent a lot of time working on the PATCH and GET requests. The PATCH request required re-working much of my game logic code, and it took awhile to figure out how my front-end data could travel to the back.
 
-users#changepw
-- Response: 204, no content (curl script)
-- Using PATCH request, old password is set to new password
+I enjoyed working out the bugs in my GET request. Once I could see an entire history of games played by a user, I calculated the number of wins by player. It was great to see the pieces connect - to transport data from the front-end to the back, to extract data from those objects, and finally to display those calculations back on the UI.
 
-games#index
-- Response 200, ok (curl script)
+Once all the AJAX plumbing was in place, my game worked! I then turned my attention to the user interface. I made some marginal improvements to the site's look. I added messages to the AJAX responses so that users would know if they entered a wrong password or had successfully changed a password.
 
-games#create
-- Response 201, created (curl script)
-- Using a POST request, a game object is created
-- The board will clear. Each `<div>` value will be set to `''`
+## Tech & Dependencies
 
-games#show
-- Response 200, ok (curl script)
+Install dependencies with `npm install`.
 
-games#update
-- Using a PATCH request, the game object will update when
-  a player makes a move on the game board
+- [JS Template](https://github.com/ga-wdi-boston/browser-template)
+- [Game Project Rails API](https://github.com/ga-wdi-boston/game-project-api)
+- Languages: HTML/CSS/Javascript/jQuery
 
-games#watch
+## Next Steps
 
-# browser-template
-
-A template for starting front-end projects. Webpack for `require` system, build
-pipeline, and development server. Boostrap and Handlebars.js included. No
-front-end frameworks included.
-
-## Dependencies
-
-Install with `npm install`.
-
--   [Webpack](https://webpack.github.io)
--   [Bootstrap](http://getbootstrap.com)
--   [Handlebars.js](http://handlebarsjs.com)
-
-At the beginning of each cohort, update the versions in
-[`package.json`](package.json) by replace all versions with a glob (`*`) and
-running `npm update --save && npm update --save-dev`. You may wish to test these
-changes by deleting the `node_modules` directory and running `npm install`.
-Fix any conflicts.
-
-## Installation
-
-1.  [Download](../../archive/master.zip) this template.
-1.  Unzip and rename the template directory.
-1.  Empty [`README.md`](README.md) and fill with your own content.
-1.  Move into the new project and `git init`.
-1.  Install dependencies with `npm install`.
-
-## Structure
-
-Dependencies are stored in [`package.json`](package.json).
-
-Do not configure `grunt` packages directly in the
-[`Gruntfile.js`](Gruntfile.js). Instead, store configurations in the
-[`grunt`](grunt) directory. You won't need a top-level key, since that's
-generated by the `Gruntfile.js` based on the filename of the configuration
-object stored in the `grunt` directory.
-
-Developers should store JavaScript files in [`assets/scripts`](assets/scripts).
-The "manifest" or entry-point is
-[`assets/scripts/index.js`](assets/scripts/index.js). In general, only
-application initialization goes in this file. It's normal for developers to
-start putting all code in this file, but encourage them to break out different
-responsibilities and use the `require` syntax put references where they're
-needed.
-
-Developers should set `config.apiOrigins.production` (and
-`config.apiOrigins.development` if it differs from the default).  With
-`apiOrigins` set, developers may rely on `config.apiOrigin` as the base for API
-URLs.
-
-Developers should store styles in [`assets/styles`](assets/styles) and load them
-from [`assets/styles/index.scss`](assets/styles/index.scss).
-
-Developers should use [getFormFields](forms.md) to retrieve form data to send to
-an API.
-
-To deploy a browser-template based SPA, run `grunt deploy`.
-
-## Tasks
-
-Developers should run these often!
-
--   `grunt nag` or just `grunt`: runs code quality analysis tools on your code
-    and complains
--   `grunt reformat`: reformats all your code in a standard style
--   `grunt <server|serve|s>`: generates bundles, watches, and livereloads
--   `grunt test`: runs any automated tests, depends on `grunt build`
--   `grunt build`: place bundled styles and scripts where `index.html` can find
-    them
+- Improve layout of game statistics
+- Improve look of buttons and form fields
+- Calculate how many games are draws
+- Add animation to game board by drawing a line through the winning combination 
 
 ## [License](LICENSE)
 
-1.  All content is licensed under a CC­BY­NC­SA 4.0 license.
-1.  All software code is licensed under GNU GPLv3. For commercial use or
-    alternative licensing, please contact legal@ga.co.
+- All content is licensed under a CC­BY­NC­SA 4.0 license.
+- All software code is licensed under GNU GPLv3. For commercial use or alternative licensing, please contact legal@ga.co.
